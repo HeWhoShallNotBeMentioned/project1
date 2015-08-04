@@ -13,3 +13,15 @@ describe('String#title_case') do
   "Beowolf Chris Iman"))
   end
 end
+
+describe('String#title_case') do
+  it("does not captilize specific designated words") do
+    expect(("from the at to").title_case()).to(eq("from the at to"))
+  end
+end
+
+describe('String#title_case') do
+  it("does capitalize specific designated words if they are the first word") do
+    expect(("from").title_case()).to(eq("From"))
+  end
+end
