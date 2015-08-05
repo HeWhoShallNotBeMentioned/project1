@@ -1,5 +1,6 @@
 require('rspec')
 require('title_case')
+require('pry')
 
 describe('String#title_case') do
   it("capitalizes the first letter of a word") do
@@ -16,12 +17,12 @@ end
 
 describe('String#title_case') do
   it("does not captilize specific designated words") do
-    expect(("from the at to").title_case()).to(eq("from the at to"))
+    expect(("hello from the at to").title_case()).to(eq("Hello from the at to"))
   end
 end
 
 describe('String#title_case') do
-  it("does capitalize specific designated words if they are the first word") do
+  it("does capitilize specific designated words if they are the first word") do
     expect(("from").title_case()).to(eq("From"))
   end
 end
